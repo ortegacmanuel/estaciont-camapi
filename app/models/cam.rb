@@ -1,0 +1,2 @@
+class Cam < ApplicationRecord
+end
