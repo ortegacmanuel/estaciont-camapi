@@ -10,7 +10,7 @@ class Api::V1::CamsController < ApplicationController
     img_to_send = "images/#{cam_name}/img0#{(@cam.last_shown + 1).to_s.rjust(2, '0')}.jpg"
     @cam.last_shown += 1
     @cam.save
-    send_file Rails.root.join("lib", img_to_send), type: "image/gif", disposition: "inline"
+    send_file Rails.root.join("lib", img_to_send), type: "image/jpg", disposition: "inline"
   end
 
   private
